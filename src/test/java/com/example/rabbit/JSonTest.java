@@ -18,9 +18,9 @@ public class JSonTest {
 		// TODO Auto-generated method stub
 		JSONObject jsonObj = new JSONObject();
 		jsonObj.put("Name", "liangyongs");
-		jsonObj.put("Id", 31);
-		String[] likes = { "java", "golang", "clang" };
-		jsonObj.put("Lks", likes);
+		jsonObj.put("Id", 33);
+		String[] hobby = { "java", "golang", "clang","php" };
+		jsonObj.put("Hobby", hobby);
 		System.out.println("Object before sending to golang side:");
 		System.out.println(jsonObj);
 		try {
@@ -31,7 +31,8 @@ public class JSonTest {
 			String line = in.readLine();
 			System.out.println("Object read from golang side:");
 			jsonObj = JSONObject.fromObject(line);
-			System.out.println(jsonObj.get("Id"));
+			System.out.println(jsonObj.toString());
+			//System.out.println("changed id is : "+jsonObj.get("id"));
 			socket.close();
 		} catch (IOException e) {
 			System.err.println(e);
