@@ -22,8 +22,8 @@ public class SpringBootElasticsearchApplicationTests {
 	@Test
     public void testSend(){
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("ninuxgithub@126.com");//发送者.
-        message.setTo("shenzm@gildata.com");//接收者.
+        message.setFrom("from your emial");//发送者.
+        message.setTo("to somebody email");//接收者.
         message.setSubject("测试邮件（邮件主题）");//邮件主题.
         message.setText("这是邮件内容:do not judge a book by its cover!");//邮件内容.
         javaMailSender.send(message);//发送邮件
@@ -32,7 +32,7 @@ public class SpringBootElasticsearchApplicationTests {
 	@Autowired  
     private MailService mailService;  
       
-    private String to = "shenzm@gildata.com";  
+    private String to = "to somebody email";  
       
     @Test  
     public void sendSimpleMail() {  
