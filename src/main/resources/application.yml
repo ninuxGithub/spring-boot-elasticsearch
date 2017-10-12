@@ -1,22 +1,4 @@
-#
-#如果采用内置的elasticsearch 可以将cluster-name , cluster-nodes注释掉， 
-#开启自定义的elasticsearch的话就开启但是会报错：
-#NodeDisconnectedException[[][IP:9300][cluster:monitor/nodes/liveness] disc
-#
 spring:
-   data:
-        elasticsearch:
-#            cluster-name: elasticsearch #默认为elasticsearch
-#            cluster-nodes: 192.168.1.100:9300 #: #配置es节点信息，逗号分隔，如果没有指定，则启动ClientNode
-            properties:
-                path:
-                  logs: ./elasticsearch/log #elasticsearch日志存储目录
-                  data: ./elasticsearch/data #elasticsearch数据存储目录
-                  
-   mail:
-      protocol: smtp #smtp是邮件发送协议，pop3和imap是邮件接收协议。因为我们要发送邮件，因此是smtp
-      host: smtp.126.com #邮件发送服务器的主机，这里采用的是126邮箱来发送邮件
-      port: 25 #邮件发送服务器的端口
-      auth: true #一般情况下，发送邮件都是要进行验证
-      username: ninuxgithub@126.com #邮件发送服务器的用户名
-      password: xxxxxx #密码, 指的是开启smtp协议的时候要求输入的密码(不是邮箱登录密码)
+  profiles:
+    active: wangyi #启用dev配置
+    

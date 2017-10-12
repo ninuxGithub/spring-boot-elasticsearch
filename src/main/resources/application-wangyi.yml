@@ -1,0 +1,18 @@
+spring:
+  data:
+    elasticsearch:
+      properties:
+        path:
+          logs: ./elasticsearch/log
+          data: ./elasticsearch/data
+  mail:
+    host: smtp.126.com
+    username: xxxxx
+    password: xxxxx
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
